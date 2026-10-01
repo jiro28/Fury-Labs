@@ -1,0 +1,111 @@
+.class public final Lzu1;
+.super Ljava/lang/Object;
+.source "r8-map-id-72d02c8c63376dd04d4e9aec45988ed3af57c049bf81c96b1ffc976f6622705c"
+
+# interfaces
+.implements Lty1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/util/Map;
+
+.field public final synthetic d:Lm11;
+
+.field public final synthetic e:Lm11;
+
+.field public final synthetic f:Lav1;
+
+
+# direct methods
+.method public constructor <init>(IILjava/util/Map;Lm11;Lm11;Lav1;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput p1, p0, Lzu1;->a:I
+
+    .line 6
+    iput p2, p0, Lzu1;->b:I
+
+    .line 8
+    iput-object p3, p0, Lzu1;->c:Ljava/util/Map;
+
+    .line 10
+    iput-object p4, p0, Lzu1;->d:Lm11;
+
+    .line 12
+    iput-object p5, p0, Lzu1;->e:Lm11;
+
+    .line 14
+    iput-object p6, p0, Lzu1;->f:Lav1;
+
+    .line 16
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lzu1;->f:Lav1;
+
+    .line 3
+    iget-object v0, v0, Lav1;->w:Lbv1;
+
+    .line 5
+    iget-object p0, p0, Lzu1;->e:Lm11;
+
+    .line 7
+    invoke-interface {p0, v0}, Lm11;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 10
+    return-void
+.end method
+
+.method public final b()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lzu1;->b:I
+
+    .line 3
+    return p0
+.end method
+
+.method public final c()Ljava/util/Map;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lzu1;->c:Ljava/util/Map;
+
+    .line 3
+    return-object p0
+.end method
+
+.method public final d()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lzu1;->a:I
+
+    .line 3
+    return p0
+.end method
+
+.method public final e()Lm11;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lzu1;->d:Lm11;
+
+    .line 3
+    return-object p0
+.end method

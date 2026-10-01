@@ -1,0 +1,962 @@
+.class public final Lwu0;
+.super Li1;
+.source "r8-map-id-72d02c8c63376dd04d4e9aec45988ed3af57c049bf81c96b1ffc976f6622705c"
+
+# interfaces
+.implements Lsg1;
+.implements Ljava/util/RandomAccess;
+.implements Lds2;
+
+
+# static fields
+.field public static final o:[F
+
+.field public static final p:Lwu0;
+
+
+# instance fields
+.field public m:[F
+
+.field public n:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    new-array v1, v0, [F
+
+    .line 4
+    sput-object v1, Lwu0;->o:[F
+
+    .line 6
+    new-instance v2, Lwu0;
+
+    .line 8
+    invoke-direct {v2, v1, v0, v0}, Lwu0;-><init>([FIZ)V
+
+    .line 11
+    sput-object v2, Lwu0;->p:Lwu0;
+
+    .line 13
+    return-void
+.end method
+
+.method public constructor <init>([FIZ)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p3}, Li1;-><init>(Z)V
+
+    .line 4
+    iput-object p1, p0, Lwu0;->m:[F
+
+    .line 6
+    iput p2, p0, Lwu0;->n:I
+
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final add(ILjava/lang/Object;)V
+    .locals 5
+
+    .line 1
+    check-cast p2, Ljava/lang/Float;
+
+    .line 3
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    .line 6
+    move-result p2
+
+    .line 7
+    invoke-virtual {p0}, Li1;->b()V
+
+    .line 10
+    if-ltz p1, :cond_1
+
+    .line 12
+    iget v0, p0, Lwu0;->n:I
+
+    .line 14
+    if-gt p1, v0, :cond_1
+
+    .line 16
+    iget-object v1, p0, Lwu0;->m:[F
+
+    .line 18
+    array-length v2, v1
+
+    .line 19
+    const/4 v3, 0x1
+
+    .line 20
+    if-ge v0, v2, :cond_0
+
+    .line 22
+    add-int/lit8 v2, p1, 0x1
+
+    .line 24
+    sub-int/2addr v0, p1
+
+    .line 25
+    invoke-static {v1, p1, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 28
+    goto :goto_0
+
+    .line 29
+    :cond_0
+    array-length v0, v1
+
+    .line 30
+    const/4 v1, 0x2
+
+    .line 31
+    const/16 v2, 0xa
+
+    .line 33
+    const/4 v4, 0x3
+
+    .line 34
+    invoke-static {v0, v4, v1, v3, v2}, Lde2;->e(IIIII)I
+
+    .line 37
+    move-result v0
+
+    .line 38
+    new-array v0, v0, [F
+
+    .line 40
+    iget-object v1, p0, Lwu0;->m:[F
+
+    .line 42
+    const/4 v2, 0x0
+
+    .line 43
+    invoke-static {v1, v2, v0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 46
+    iget-object v1, p0, Lwu0;->m:[F
+
+    .line 48
+    add-int/lit8 v2, p1, 0x1
+
+    .line 50
+    iget v4, p0, Lwu0;->n:I
+
+    .line 52
+    sub-int/2addr v4, p1
+
+    .line 53
+    invoke-static {v1, p1, v0, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 56
+    iput-object v0, p0, Lwu0;->m:[F
+
+    .line 58
+    :goto_0
+    iget-object v0, p0, Lwu0;->m:[F
+
+    .line 60
+    aput p2, v0, p1
+
+    .line 62
+    iget p1, p0, Lwu0;->n:I
+
+    .line 64
+    add-int/2addr p1, v3
+
+    .line 65
+    iput p1, p0, Lwu0;->n:I
+
+    .line 67
+    iget p1, p0, Ljava/util/AbstractList;->modCount:I
+
+    .line 69
+    add-int/2addr p1, v3
+
+    .line 70
+    iput p1, p0, Ljava/util/AbstractList;->modCount:I
+
+    .line 72
+    return-void
+
+    .line 73
+    :cond_1
+    const-string p2, "Index:"
+
+    .line 75
+    const-string v0, ", Size:"
+
+    .line 77
+    invoke-static {p2, p1, v0}, Lde2;->q(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 80
+    move-result-object p1
+
+    .line 81
+    iget p0, p0, Lwu0;->n:I
+
+    .line 83
+    invoke-static {p1, p0}, Lrw2;->j(Ljava/lang/StringBuilder;I)V
+
+    .line 86
+    return-void
+.end method
+
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 87
+    check-cast p1, Ljava/lang/Float;
+
+    .line 88
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lwu0;->d(F)V
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 5
+
+    .line 1
+    invoke-virtual {p0}, Li1;->b()V
+
+    .line 4
+    sget-object v0, Lxg1;->a:Ljava/nio/charset/Charset;
+
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 9
+    instance-of v0, p1, Lwu0;
+
+    .line 11
+    if-nez v0, :cond_0
+
+    .line 13
+    invoke-super {p0, p1}, Li1;->addAll(Ljava/util/Collection;)Z
+
+    .line 16
+    move-result p0
+
+    .line 17
+    return p0
+
+    .line 18
+    :cond_0
+    check-cast p1, Lwu0;
+
+    .line 20
+    iget v0, p1, Lwu0;->n:I
+
+    .line 22
+    const/4 v1, 0x0
+
+    .line 23
+    if-nez v0, :cond_1
+
+    .line 25
+    return v1
+
+    .line 26
+    :cond_1
+    iget v2, p0, Lwu0;->n:I
+
+    .line 28
+    const v3, 0x7fffffff
+
+    .line 31
+    sub-int/2addr v3, v2
+
+    .line 32
+    if-lt v3, v0, :cond_3
+
+    .line 34
+    add-int/2addr v2, v0
+
+    .line 35
+    iget-object v0, p0, Lwu0;->m:[F
+
+    .line 37
+    array-length v3, v0
+
+    .line 38
+    if-le v2, v3, :cond_2
+
+    .line 40
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([FI)[F
+
+    .line 43
+    move-result-object v0
+
+    .line 44
+    iput-object v0, p0, Lwu0;->m:[F
+
+    .line 46
+    :cond_2
+    iget-object v0, p1, Lwu0;->m:[F
+
+    .line 48
+    iget-object v3, p0, Lwu0;->m:[F
+
+    .line 50
+    iget v4, p0, Lwu0;->n:I
+
+    .line 52
+    iget p1, p1, Lwu0;->n:I
+
+    .line 54
+    invoke-static {v0, v1, v3, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 57
+    iput v2, p0, Lwu0;->n:I
+
+    .line 59
+    iget p1, p0, Ljava/util/AbstractList;->modCount:I
+
+    .line 61
+    const/4 v0, 0x1
+
+    .line 62
+    add-int/2addr p1, v0
+
+    .line 63
+    iput p1, p0, Ljava/util/AbstractList;->modCount:I
+
+    .line 65
+    return v0
+
+    .line 66
+    :cond_3
+    new-instance p0, Ljava/lang/OutOfMemoryError;
+
+    .line 68
+    invoke-direct {p0}, Ljava/lang/OutOfMemoryError;-><init>()V
+
+    .line 71
+    throw p0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lwu0;->indexOf(Ljava/lang/Object;)I
+
+    .line 4
+    move-result p0
+
+    .line 5
+    const/4 p1, -0x1
+
+    .line 6
+    if-eq p0, p1, :cond_0
+
+    .line 8
+    const/4 p0, 0x1
+
+    .line 9
+    return p0
+
+    .line 10
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 11
+    return p0
+.end method
+
+.method public final d(F)V
+    .locals 5
+
+    .line 1
+    invoke-virtual {p0}, Li1;->b()V
+
+    .line 4
+    iget v0, p0, Lwu0;->n:I
+
+    .line 6
+    iget-object v1, p0, Lwu0;->m:[F
+
+    .line 8
+    array-length v2, v1
+
+    .line 9
+    if-ne v0, v2, :cond_0
+
+    .line 11
+    array-length v0, v1
+
+    .line 12
+    const/4 v1, 0x2
+
+    .line 13
+    const/16 v2, 0xa
+
+    .line 15
+    const/4 v3, 0x3
+
+    .line 16
+    const/4 v4, 0x1
+
+    .line 17
+    invoke-static {v0, v3, v1, v4, v2}, Lde2;->e(IIIII)I
+
+    .line 20
+    move-result v0
+
+    .line 21
+    new-array v0, v0, [F
+
+    .line 23
+    iget-object v1, p0, Lwu0;->m:[F
+
+    .line 25
+    iget v2, p0, Lwu0;->n:I
+
+    .line 27
+    const/4 v3, 0x0
+
+    .line 28
+    invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 31
+    iput-object v0, p0, Lwu0;->m:[F
+
+    .line 33
+    :cond_0
+    iget-object v0, p0, Lwu0;->m:[F
+
+    .line 35
+    iget v1, p0, Lwu0;->n:I
+
+    .line 37
+    add-int/lit8 v2, v1, 0x1
+
+    .line 39
+    iput v2, p0, Lwu0;->n:I
+
+    .line 41
+    aput p1, v0, v1
+
+    .line 43
+    return-void
+.end method
+
+.method public final bridge synthetic e(I)Lvg1;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lwu0;->g(I)Lwu0;
+
+    .line 4
+    move-result-object p0
+
+    .line 5
+    return-object p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    if-ne p0, p1, :cond_0
+
+    .line 4
+    return v0
+
+    .line 5
+    :cond_0
+    instance-of v1, p1, Lwu0;
+
+    .line 7
+    if-nez v1, :cond_1
+
+    .line 9
+    invoke-super {p0, p1}, Li1;->equals(Ljava/lang/Object;)Z
+
+    .line 12
+    move-result p0
+
+    .line 13
+    return p0
+
+    .line 14
+    :cond_1
+    check-cast p1, Lwu0;
+
+    .line 16
+    iget v1, p0, Lwu0;->n:I
+
+    .line 18
+    iget v2, p1, Lwu0;->n:I
+
+    .line 20
+    const/4 v3, 0x0
+
+    .line 21
+    if-eq v1, v2, :cond_2
+
+    .line 23
+    return v3
+
+    .line 24
+    :cond_2
+    iget-object p1, p1, Lwu0;->m:[F
+
+    .line 26
+    move v1, v3
+
+    .line 27
+    :goto_0
+    iget v2, p0, Lwu0;->n:I
+
+    .line 29
+    if-ge v1, v2, :cond_4
+
+    .line 31
+    iget-object v2, p0, Lwu0;->m:[F
+
+    .line 33
+    aget v2, v2, v1
+
+    .line 35
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    .line 38
+    move-result v2
+
+    .line 39
+    aget v4, p1, v1
+
+    .line 41
+    invoke-static {v4}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    .line 44
+    move-result v4
+
+    .line 45
+    if-eq v2, v4, :cond_3
+
+    .line 47
+    return v3
+
+    .line 48
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
+
+    .line 50
+    goto :goto_0
+
+    .line 51
+    :cond_4
+    return v0
+.end method
+
+.method public final f(I)V
+    .locals 2
+
+    .line 1
+    if-ltz p1, :cond_0
+
+    .line 3
+    iget v0, p0, Lwu0;->n:I
+
+    .line 5
+    if-ge p1, v0, :cond_0
+
+    .line 7
+    return-void
+
+    .line 8
+    :cond_0
+    const-string v0, "Index:"
+
+    .line 10
+    const-string v1, ", Size:"
+
+    .line 12
+    invoke-static {v0, p1, v1}, Lde2;->q(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 15
+    move-result-object p1
+
+    .line 16
+    iget p0, p0, Lwu0;->n:I
+
+    .line 18
+    invoke-static {p1, p0}, Lrw2;->j(Ljava/lang/StringBuilder;I)V
+
+    .line 21
+    return-void
+.end method
+
+.method public final g(I)Lwu0;
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lwu0;->n:I
+
+    .line 3
+    if-lt p1, v0, :cond_1
+
+    .line 5
+    if-nez p1, :cond_0
+
+    .line 7
+    sget-object p1, Lwu0;->o:[F
+
+    .line 9
+    goto :goto_0
+
+    .line 10
+    :cond_0
+    iget-object v0, p0, Lwu0;->m:[F
+
+    .line 12
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([FI)[F
+
+    .line 15
+    move-result-object p1
+
+    .line 16
+    :goto_0
+    new-instance v0, Lwu0;
+
+    .line 18
+    iget p0, p0, Lwu0;->n:I
+
+    .line 20
+    const/4 v1, 0x1
+
+    .line 21
+    invoke-direct {v0, p1, p0, v1}, Lwu0;-><init>([FIZ)V
+
+    .line 24
+    return-object v0
+
+    .line 25
+    :cond_1
+    invoke-static {}, Lrw2;->k()V
+
+    .line 28
+    const/4 p0, 0x0
+
+    .line 29
+    return-object p0
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0, p1}, Lwu0;->f(I)V
+
+    .line 4
+    iget-object p0, p0, Lwu0;->m:[F
+
+    .line 6
+    aget p0, p0, p1
+
+    .line 8
+    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 11
+    move-result-object p0
+
+    .line 12
+    return-object p0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    const/4 v1, 0x0
+
+    .line 3
+    :goto_0
+    iget v2, p0, Lwu0;->n:I
+
+    .line 5
+    if-ge v1, v2, :cond_0
+
+    .line 7
+    mul-int/lit8 v0, v0, 0x1f
+
+    .line 9
+    iget-object v2, p0, Lwu0;->m:[F
+
+    .line 11
+    aget v2, v2, v1
+
+    .line 13
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    .line 16
+    move-result v2
+
+    .line 17
+    add-int/2addr v0, v2
+
+    .line 18
+    add-int/lit8 v1, v1, 0x1
+
+    .line 20
+    goto :goto_0
+
+    .line 21
+    :cond_0
+    return v0
+.end method
+
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 4
+
+    .line 1
+    instance-of v0, p1, Ljava/lang/Float;
+
+    .line 3
+    const/4 v1, -0x1
+
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 6
+    return v1
+
+    .line 7
+    :cond_0
+    check-cast p1, Ljava/lang/Float;
+
+    .line 9
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    .line 12
+    move-result p1
+
+    .line 13
+    iget v0, p0, Lwu0;->n:I
+
+    .line 15
+    const/4 v2, 0x0
+
+    .line 16
+    :goto_0
+    if-ge v2, v0, :cond_2
+
+    .line 18
+    iget-object v3, p0, Lwu0;->m:[F
+
+    .line 20
+    aget v3, v3, v2
+
+    .line 22
+    cmpl-float v3, v3, p1
+
+    .line 24
+    if-nez v3, :cond_1
+
+    .line 26
+    return v2
+
+    .line 27
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    .line 29
+    goto :goto_0
+
+    .line 30
+    :cond_2
+    return v1
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 4
+
+    .line 1
+    invoke-virtual {p0}, Li1;->b()V
+
+    .line 4
+    invoke-virtual {p0, p1}, Lwu0;->f(I)V
+
+    .line 7
+    iget-object v0, p0, Lwu0;->m:[F
+
+    .line 9
+    aget v1, v0, p1
+
+    .line 11
+    iget v2, p0, Lwu0;->n:I
+
+    .line 13
+    add-int/lit8 v3, v2, -0x1
+
+    .line 15
+    if-ge p1, v3, :cond_0
+
+    .line 17
+    add-int/lit8 v3, p1, 0x1
+
+    .line 19
+    sub-int/2addr v2, p1
+
+    .line 20
+    add-int/lit8 v2, v2, -0x1
+
+    .line 22
+    invoke-static {v0, v3, v0, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 25
+    :cond_0
+    iget p1, p0, Lwu0;->n:I
+
+    .line 27
+    add-int/lit8 p1, p1, -0x1
+
+    .line 29
+    iput p1, p0, Lwu0;->n:I
+
+    .line 31
+    iget p1, p0, Ljava/util/AbstractList;->modCount:I
+
+    .line 33
+    add-int/lit8 p1, p1, 0x1
+
+    .line 35
+    iput p1, p0, Ljava/util/AbstractList;->modCount:I
+
+    .line 37
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 40
+    move-result-object p0
+
+    .line 41
+    return-object p0
+.end method
+
+.method public final removeRange(II)V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Li1;->b()V
+
+    .line 4
+    if-lt p2, p1, :cond_0
+
+    .line 6
+    iget-object v0, p0, Lwu0;->m:[F
+
+    .line 8
+    iget v1, p0, Lwu0;->n:I
+
+    .line 10
+    sub-int/2addr v1, p2
+
+    .line 11
+    invoke-static {v0, p2, v0, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 14
+    iget v0, p0, Lwu0;->n:I
+
+    .line 16
+    sub-int/2addr p2, p1
+
+    .line 17
+    sub-int/2addr v0, p2
+
+    .line 18
+    iput v0, p0, Lwu0;->n:I
+
+    .line 20
+    iget p1, p0, Ljava/util/AbstractList;->modCount:I
+
+    .line 22
+    add-int/lit8 p1, p1, 0x1
+
+    .line 24
+    iput p1, p0, Ljava/util/AbstractList;->modCount:I
+
+    .line 26
+    return-void
+
+    .line 27
+    :cond_0
+    const-string p0, "toIndex < fromIndex"
+
+    .line 29
+    invoke-static {p0}, Lik0;->h(Ljava/lang/String;)V
+
+    .line 32
+    return-void
+.end method
+
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    check-cast p2, Ljava/lang/Float;
+
+    .line 3
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
+
+    .line 6
+    move-result p2
+
+    .line 7
+    invoke-virtual {p0}, Li1;->b()V
+
+    .line 10
+    invoke-virtual {p0, p1}, Lwu0;->f(I)V
+
+    .line 13
+    iget-object p0, p0, Lwu0;->m:[F
+
+    .line 15
+    aget v0, p0, p1
+
+    .line 17
+    aput p2, p0, p1
+
+    .line 19
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    .line 22
+    move-result-object p0
+
+    .line 23
+    return-object p0
+.end method
+
+.method public final size()I
+    .locals 0
+
+    .line 1
+    iget p0, p0, Lwu0;->n:I
+
+    .line 3
+    return p0
+.end method

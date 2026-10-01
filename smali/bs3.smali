@@ -1,0 +1,22 @@
+.class public final Lbs3;
+.super Ljava/util/concurrent/CancellationException;
+.source "r8-map-id-72d02c8c63376dd04d4e9aec45988ed3af57c049bf81c96b1ffc976f6622705c"
+
+
+# instance fields
+.field public final transient l:Lcs3;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Lcs3;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    .line 4
+    iput-object p2, p0, Lbs3;->l:Lcs3;
+
+    .line 6
+    return-void
+.end method

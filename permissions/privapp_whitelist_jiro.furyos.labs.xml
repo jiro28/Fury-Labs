@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="jiro.furyos.labs">
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="android.permission.WRITE_GLOBAL_SETTINGS" />
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+        <permission name="android.permission.READ_DEVICE_IDENTIFIERS" />
+        <permission name="android.permission.SET_PROPERTY" />
+        <permission name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+        <permission name="android.permission.PACKAGE_USAGE_STATS" />
+        <permission name="android.permission.INSTALL_PACKAGES" />
+        <permission name="android.permission.DELETE_PACKAGES" />
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+        <permission name="android.permission.CLEAR_APP_CACHE" />
+        <permission name="android.permission.CLEAR_APP_USER_DATA" />
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
+        <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND" />
+        <permission name="android.permission.READ_LOGS" />
+        <permission name="android.permission.DUMP" />
+        <permission name="android.permission.REBOOT" />
+        <permission name="android.permission.DEVICE_POWER" />
+        <permission name="android.permission.RECOVERY" />
+        <permission name="android.permission.FORCE_STOP_PACKAGES" />
+        <permission name="android.permission.KILL_BACKGROUND_PROCESSES" />
+        <permission name="android.permission.ACCESS_ALL_EXTERNAL_STORAGE" />
+        <permission name="android.permission.MANAGE_MEDIA" />
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    </privapp-permissions>
+</permissions>

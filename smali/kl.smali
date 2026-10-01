@@ -1,0 +1,128 @@
+.class public final synthetic Lkl;
+.super Ljava/lang/Object;
+.source "r8-map-id-72d02c8c63376dd04d4e9aec45988ed3af57c049bf81c96b1ffc976f6622705c"
+
+# interfaces
+.implements La21;
+
+
+# instance fields
+.field public final synthetic l:Ljava/lang/String;
+
+.field public final synthetic m:Le32;
+
+.field public final synthetic n:Lyq3;
+
+.field public final synthetic o:I
+
+.field public final synthetic p:Z
+
+.field public final synthetic q:I
+
+.field public final synthetic r:I
+
+.field public final synthetic s:I
+
+.field public final synthetic t:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/String;Le32;Lyq3;IZIIII)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lkl;->l:Ljava/lang/String;
+
+    .line 6
+    iput-object p2, p0, Lkl;->m:Le32;
+
+    .line 8
+    iput-object p3, p0, Lkl;->n:Lyq3;
+
+    .line 10
+    iput p4, p0, Lkl;->o:I
+
+    .line 12
+    iput-boolean p5, p0, Lkl;->p:Z
+
+    .line 14
+    iput p6, p0, Lkl;->q:I
+
+    .line 16
+    iput p7, p0, Lkl;->r:I
+
+    .line 18
+    iput p8, p0, Lkl;->s:I
+
+    .line 20
+    iput p9, p0, Lkl;->t:I
+
+    .line 22
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    .line 1
+    move-object v7, p1
+
+    .line 2
+    check-cast v7, Lq10;
+
+    .line 4
+    check-cast p2, Ljava/lang/Integer;
+
+    .line 6
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 9
+    iget p1, p0, Lkl;->s:I
+
+    .line 11
+    or-int/lit8 p1, p1, 0x1
+
+    .line 13
+    invoke-static {p1}, Lrs2;->w(I)I
+
+    .line 16
+    move-result v8
+
+    .line 17
+    iget-object v0, p0, Lkl;->l:Ljava/lang/String;
+
+    .line 19
+    iget-object v1, p0, Lkl;->m:Le32;
+
+    .line 21
+    iget-object v2, p0, Lkl;->n:Lyq3;
+
+    .line 23
+    iget v3, p0, Lkl;->o:I
+
+    .line 25
+    iget-boolean v4, p0, Lkl;->p:Z
+
+    .line 27
+    iget v5, p0, Lkl;->q:I
+
+    .line 29
+    iget v6, p0, Lkl;->r:I
+
+    .line 31
+    iget v9, p0, Lkl;->t:I
+
+    .line 33
+    invoke-static/range {v0 .. v9}, Lq54;->b(Ljava/lang/String;Le32;Lyq3;IZIILq10;II)V
+
+    .line 36
+    sget-object p0, Lqw3;->a:Lqw3;
+
+    .line 38
+    return-object p0
+.end method

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Outer Cyber Shield Hexagon -->
+    <path
+        android:fillColor="#151A24"
+        android:strokeColor="#FF2D55"
+        android:strokeWidth="3.0"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round"
+        android:pathData="M 50,6 L 88,24 L 88,70 L 50,94 L 12,70 L 12,24 Z" />
+    
+    <!-- Inner Accent Glow Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FF3B30"
+        android:strokeWidth="1.5"
+        android:pathData="M 50,13 L 81,28 L 81,66 L 50,87 L 19,66 L 19,28 Z" />
+
+    <!-- FuryOS Stylized Flaming "F" & Circuit Energy Core -->
+    <!-- Top Flame Wing of F -->
+    <path
+        android:fillColor="#FF2D55"
+        android:pathData="M 32,28 L 72,28 C 66,35 59,37 54,37 L 43,37 L 43,45 L 63,45 C 58,52 50,54 43,54 L 43,72 L 32,72 Z" />
+
+    <!-- Core Fire Spark & Dynamic Accent -->
+    <path
+        android:fillColor="#FF725C"
+        android:pathData="M 43,28 L 68,28 C 60,33 52,35 43,35 Z" />
+
+    <!-- Center Energy Flame Notch -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 49,38 C 55,38 60,40 64,43 L 61,45 L 49,45 Z" />
+
+    <!-- Cyber Flame Tip on Shield Apex -->
+    <path
+        android:fillColor="#FF3B30"
+        android:pathData="M 50,11 C 53,16 56,18 58,22 C 55,22 53,20 50,17 C 47,20 45,22 42,22 C 44,18 47,16 50,11 Z" />
+
+    <!-- Futuristic Lab Circuit Accent Dots -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M 27,24 A 2.5,2.5 0 1,1 27,29 A 2.5,2.5 0 1,1 27,24 Z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M 73,24 A 2.5,2.5 0 1,1 73,29 A 2.5,2.5 0 1,1 73,24 Z" />
+    <path
+        android:fillColor="#FF2D55"
+        android:pathData="M 50,75 A 3,3 0 1,1 50,81 A 3,3 0 1,1 50,75 Z" />
+</vector>

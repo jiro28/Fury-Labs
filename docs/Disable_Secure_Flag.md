@@ -1,0 +1,114 @@
+# FuryOS LABs Secure Flag Guide
+
+Secure Flag need Framework dex 2.0.3+
+
+## Services.jar
+
+### 1
+**Class:**
+```smali
+Lcom/android/server/devicepolicy/DevicePolicyCacheImpl;
+```
+
+**Method:**
+```smali
+isScreenCaptureAllowed(I)Z
+```
+Add the following code below `.registers X`:
+```smali
+invoke-static {}, Landroid/security/furylab/FuryOSHook;->isSecureFlag()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_furylab
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_furylab
+```
+
+### 2
+**Class:**
+```smali
+Lcom/android/server/wm/WindowState;
+```
+**Or Class:**
+```smali
+Lcom/android/server/wm/WindowStateAnimator;
+```
+
+**Method:**
+```smali
+isSecureLocked()Z
+```
+
+Add the following code below `.registers X`:
+```smali
+invoke-static {}, Landroid/security/furylab/FuryOSHook;->isSecureFlag()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_furylab
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_furylab
+```
+
+**Method:**
+```smali
+setSecureLocked(Z)V
+```
+
+Add the following code below `.registers X`:
+```smali
+invoke-static {}, Landroid/security/furylab/FuryOSHook;->isSecureFlag()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_furylab
+
+    return-void
+
+    :cond_furylab
+```
+
+### 3 
+**Class:**
+```smali
+captureDisplay(ILandroid/window/ScreenCapture$CaptureArgs;Landroid/window/ScreenCapture$ScreenCaptureListener;)V
+```
+in method find:
+```smali
+->notAllowCaptureDisplay(Lcom/android/server/wm/RootWindowContainer;I)Z
+```
+
+Below the line:
+```smali
+->notAllowCaptureDisplay(Lcom/android/server/wm/RootWindowContainer;I)Z
+
+    move-result vY
+```
+
+Add:
+```smali
+invoke-static {}, Landroid/security/furylab/FuryOSHook;->isSecureFlag()Z
+
+    move-result vX
+
+    if-eqz vX, :cond_furylab
+
+    const/4 v0, 0x0
+
+    :cond_furylab
+```
+
+**Add +1 to the Registers number, and replace vX with the new register.**
+
+For example: registers 7 -> registers 8 and vX = v3
+
+**In some ROMs, this method may not find the blocking code, so it can be skipped.**

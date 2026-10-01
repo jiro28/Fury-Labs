@@ -1,0 +1,135 @@
+.class final Ltj0;
+.super Li32;
+.source "r8-map-id-72d02c8c63376dd04d4e9aec45988ed3af57c049bf81c96b1ffc976f6622705c"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Li32;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final a:Lm11;
+
+
+# direct methods
+.method public constructor <init>(Lm11;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Ltj0;->a:Lm11;
+
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final e()Ld32;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lqq;
+
+    .line 3
+    new-instance v1, Lrq;
+
+    .line 5
+    invoke-direct {v1}, Lrq;-><init>()V
+
+    .line 8
+    iget-object p0, p0, Ltj0;->a:Lm11;
+
+    .line 10
+    invoke-direct {v0, v1, p0}, Lqq;-><init>(Lrq;Lm11;)V
+
+    .line 13
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    if-ne p0, p1, :cond_0
+
+    .line 4
+    return v0
+
+    .line 5
+    :cond_0
+    instance-of v1, p1, Ltj0;
+
+    .line 7
+    const/4 v2, 0x0
+
+    .line 8
+    if-nez v1, :cond_1
+
+    .line 10
+    return v2
+
+    .line 11
+    :cond_1
+    check-cast p1, Ltj0;
+
+    .line 13
+    iget-object p1, p1, Ltj0;->a:Lm11;
+
+    .line 15
+    iget-object p0, p0, Ltj0;->a:Lm11;
+
+    .line 17
+    if-eq p0, p1, :cond_2
+
+    .line 19
+    return v2
+
+    .line 20
+    :cond_2
+    return v0
+.end method
+
+.method public final g(Ld32;)V
+    .locals 0
+
+    .line 1
+    check-cast p1, Lqq;
+
+    .line 3
+    iget-object p0, p0, Ltj0;->a:Lm11;
+
+    .line 5
+    iput-object p0, p1, Lqq;->B:Lm11;
+
+    .line 7
+    invoke-virtual {p1}, Lqq;->l1()V
+
+    .line 10
+    return-void
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Ltj0;->a:Lm11;
+
+    .line 3
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    .line 6
+    move-result p0
+
+    .line 7
+    return p0
+.end method
