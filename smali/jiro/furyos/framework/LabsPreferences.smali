@@ -354,13 +354,13 @@
 .method public static getSettingTruthful(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .registers 7
 
-    .line 199
+    .line 213
     if-eqz p0, :cond_94
 
-    .line 201
+    .line 215
     nop
 
-    .line 202
+    .line 216
     :try_start_3
     const-string v0, "global"
 
@@ -370,7 +370,7 @@
 
     if-eqz v0, :cond_14
 
-    .line 203
+    .line 217
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -381,7 +381,7 @@
 
     goto :goto_37
 
-    .line 204
+    .line 218
     :cond_14
     const-string v0, "secure"
 
@@ -391,7 +391,7 @@
 
     if-eqz v0, :cond_25
 
-    .line 205
+    .line 219
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -402,7 +402,7 @@
 
     goto :goto_37
 
-    .line 206
+    .line 220
     :cond_25
     const-string v0, "system"
 
@@ -412,7 +412,7 @@
 
     if-eqz p1, :cond_36
 
-    .line 207
+    .line 221
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -423,11 +423,11 @@
 
     goto :goto_37
 
-    .line 206
+    .line 220
     :cond_36
     const/4 p1, 0x0
 
-    .line 209
+    .line 223
     :goto_37
     if-eqz p1, :cond_6c
 
@@ -445,15 +445,15 @@
 
     if-nez v0, :cond_6c
 
-    .line 210
+    .line 224
     invoke-static {p0}, Ljiro/furyos/framework/LabsPreferences;->getPrefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 211
+    .line 225
     if-eqz v0, :cond_6b
 
-    .line 212
+    .line 226
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -484,19 +484,19 @@
     :try_end_6b
     .catchall {:try_start_3 .. :try_end_6b} :catchall_6d
 
-    .line 214
+    .line 228
     :cond_6b
     return-object p1
 
-    .line 218
+    .line 232
     :cond_6c
     goto :goto_94
 
-    .line 216
+    .line 230
     :catchall_6d
     move-exception p1
 
-    .line 217
+    .line 231
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -533,31 +533,31 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
+    .line 235
     :cond_94
     :goto_94
     invoke-static {p0}, Ljiro/furyos/framework/LabsPreferences;->getPrefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object p0
 
-    .line 222
+    .line 236
     if-eqz p0, :cond_11c
 
-    .line 223
+    .line 237
     invoke-interface {p0, p2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_a5
 
-    .line 224
+    .line 238
     invoke-interface {p0, p2, p3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 226
+    .line 240
     :cond_a5
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -583,7 +583,7 @@
 
     if-eqz p1, :cond_d4
 
-    .line 227
+    .line 241
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -606,7 +606,7 @@
 
     return-object p0
 
-    .line 230
+    .line 244
     :cond_d4
     const-string p1, "furyos_secure_flag"
 
@@ -626,7 +626,7 @@
 
     goto :goto_10f
 
-    .line 234
+    .line 248
     :cond_e5
     const-string p1, "furyos_hide_devlist"
 
@@ -644,14 +644,14 @@
 
     if-eqz v0, :cond_fa
 
-    .line 235
+    .line 249
     invoke-interface {p0, p1, p3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 236
+    .line 250
     :cond_fa
     const-string p1, "furyos_hide_applist"
 
@@ -669,14 +669,14 @@
 
     if-eqz p2, :cond_11c
 
-    .line 237
+    .line 251
     invoke-interface {p0, p1, p3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 231
+    .line 245
     :cond_10f
     :goto_10f
     const-string p1, "kaorios_secure_flag"
@@ -687,14 +687,14 @@
 
     if-eqz p2, :cond_11c
 
-    .line 232
+    .line 246
     invoke-interface {p0, p1, p3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
-    .line 241
+    .line 255
     :cond_11c
     return-object p3
 .end method
@@ -702,7 +702,7 @@
 .method public static getStatusBarAmPm(Landroid/content/Context;I)I
     .registers 5
 
-    .line 266
+    .line 280
     :try_start_0
     const-string v0, "system"
 
@@ -724,18 +724,18 @@
 
     return p0
 
-    .line 267
+    .line 281
     :catch_11
     move-exception p0
 
-    .line 268
+    .line 282
     return p1
 .end method
 
 .method public static getStatusBarBatteryPercent(Landroid/content/Context;I)I
     .registers 5
 
-    .line 298
+    .line 312
     :try_start_0
     const-string v0, "system"
 
@@ -757,18 +757,18 @@
 
     return p0
 
-    .line 299
+    .line 313
     :catch_11
     move-exception p0
 
-    .line 300
+    .line 314
     return p1
 .end method
 
 .method public static getStatusBarBatteryStyle(Landroid/content/Context;I)I
     .registers 5
 
-    .line 286
+    .line 300
     :try_start_0
     const-string v0, "system"
 
@@ -790,18 +790,18 @@
 
     return p0
 
-    .line 287
+    .line 301
     :catch_11
     move-exception p0
 
-    .line 288
+    .line 302
     return p1
 .end method
 
 .method public static getStatusBarClock(Landroid/content/Context;I)I
     .registers 5
 
-    .line 254
+    .line 268
     :try_start_0
     const-string v0, "system"
 
@@ -823,18 +823,18 @@
 
     return p0
 
-    .line 255
+    .line 269
     :catch_11
     move-exception p0
 
-    .line 256
+    .line 270
     return p1
 .end method
 
 .method public static isStatusBarSeconds(Landroid/content/Context;)Z
     .registers 4
 
-    .line 277
+    .line 291
     const-string v0, "status_bar_clock_seconds"
 
     const-string v1, "0"
@@ -988,205 +988,356 @@
 .end method
 
 .method public static putSettingTruthful(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-    .registers 9
+    .registers 14
 
     .line 147
+    const-string v0, "fw_keybox_apply_all"
+
+    const-string v1, "fw_keybox_enabled"
+
     invoke-static {p0}, Ljiro/furyos/framework/LabsPreferences;->getPrefs(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    move-result-object v0
+    move-result-object v2
 
     .line 148
-    if-eqz v0, :cond_71
-
-    .line 149
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    .line 150
-    invoke-interface {v1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 151
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "_desired"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 153
-    const-string v2, "furyos_secure_flag"
-
-    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    const-string v4, "window_ignore_secure"
-
-    if-nez v3, :cond_63
-
-    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_34
-
-    goto :goto_63
-
-    .line 157
-    :cond_34
-    const-string v2, "furyos_hide_devlist"
-
-    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    const-string v4, "kaorios_hide_devlist"
-
-    if-nez v3, :cond_5c
-
-    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_45
-
-    goto :goto_5c
-
-    .line 160
-    :cond_45
-    const-string v2, "furyos_hide_applist"
-
-    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    const-string v4, "hide_applist"
-
-    if-nez v3, :cond_55
-
-    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6e
-
-    .line 161
-    :cond_55
-    invoke-interface {v1, v4, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 162
-    invoke-interface {v1, v2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    goto :goto_6e
-
-    .line 158
-    :cond_5c
-    :goto_5c
-    invoke-interface {v1, v4, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 159
-    invoke-interface {v1, v2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    goto :goto_6e
-
-    .line 154
-    :cond_63
-    :goto_63
     const-string v3, "kaorios_secure_flag"
 
-    invoke-interface {v1, v3, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v4, "furyos_secure_flag"
+
+    const-string v5, "window_ignore_secure"
+
+    if-eqz v2, :cond_75
+
+    .line 149
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v6
+
+    .line 150
+    invoke-interface {v6, p2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 151
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v7, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, "_desired"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-interface {v6, v7, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 153
+    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_69
+
+    invoke-virtual {v5, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3a
+
+    goto :goto_69
+
+    .line 157
+    :cond_3a
+    const-string v7, "furyos_hide_devlist"
+
+    invoke-virtual {v7, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    const-string v9, "kaorios_hide_devlist"
+
+    if-nez v8, :cond_62
+
+    invoke-virtual {v9, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4b
+
+    goto :goto_62
+
+    .line 160
+    :cond_4b
+    const-string v7, "furyos_hide_applist"
+
+    invoke-virtual {v7, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    const-string v9, "hide_applist"
+
+    if-nez v8, :cond_5b
+
+    invoke-virtual {v9, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_72
+
+    .line 161
+    :cond_5b
+    invoke-interface {v6, v9, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 162
+    invoke-interface {v6, v7, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_72
+
+    .line 158
+    :cond_62
+    :goto_62
+    invoke-interface {v6, v9, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 159
+    invoke-interface {v6, v7, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_72
+
+    .line 154
+    :cond_69
+    :goto_69
+    invoke-interface {v6, v3, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 155
-    invoke-interface {v1, v4, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v6, v5, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 156
-    invoke-interface {v1, v2, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v6, v4, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     .line 164
-    :cond_6e
-    :goto_6e
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    :cond_72
+    :goto_72
+    invoke-interface {v6}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     .line 167
-    :cond_71
+    :cond_75
     nop
 
     .line 168
-    const/4 v1, 0x0
+    const/4 v6, 0x0
 
-    if-eqz p0, :cond_d3
+    if-eqz p0, :cond_152
 
     .line 170
-    :try_start_75
-    const-string v2, "global"
+    :try_start_79
+    const-string v7, "global"
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v7, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v7
 
-    if-eqz v2, :cond_87
+    if-eqz v7, :cond_ed
 
     .line 171
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-static {p0, p2, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p1, p2, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    move-result p0
-
-    move v1, p0
-
-    goto :goto_aa
+    move-result p1
 
     .line 172
-    :cond_87
-    const-string v2, "secure"
+    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result v7
 
-    move-result v2
+    if-nez v7, :cond_d7
 
-    if-eqz v2, :cond_99
+    invoke-virtual {v5, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 173
+    move-result v7
+
+    if-nez v7, :cond_d7
+
+    invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_9c
+
+    goto :goto_d7
+
+    .line 176
+    :cond_9c
+    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+    :try_end_a0
+    .catchall {:try_start_79 .. :try_end_a0} :catchall_12a
+
+    const-string v4, "kaorios_keybox_enabled"
+
+    if-nez v3, :cond_c8
+
+    :try_start_a4
+    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_ab
+
+    goto :goto_c8
+
+    .line 179
+    :cond_ab
+    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+    :try_end_af
+    .catchall {:try_start_a4 .. :try_end_af} :catchall_12a
+
+    const-string v3, "kaorios_keybox_apply_all"
+
+    if-nez v1, :cond_b9
+
+    :try_start_b3
+    invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_116
+
+    .line 180
+    :cond_b9
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    invoke-static {v1, v3, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 181
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    invoke-static {p0, p2, p3}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, v0, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    move-result p0
+    goto :goto_116
 
-    move v1, p0
+    .line 177
+    :cond_c8
+    :goto_c8
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    goto :goto_aa
+    move-result-object v0
+
+    invoke-static {v0, v4, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 178
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {p0, v1, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_116
+
+    .line 173
+    :cond_d7
+    :goto_d7
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    invoke-static {v0, v3, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 174
-    :cond_99
-    const-string v2, "system"
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result-object v0
+
+    invoke-static {v0, v5, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 175
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {p0, v4, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    goto :goto_116
+
+    .line 183
+    :cond_ed
+    const-string v0, "secure"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_118
+
+    .line 184
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    invoke-static {p1, p2, p3}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_aa
+    .line 185
+    invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 175
+    move-result v0
+
+    if-nez v0, :cond_10f
+
+    invoke-virtual {v5, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_10f
+
+    invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_116
+
+    .line 186
+    :cond_10f
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {p0, v5, p3}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    .line 194
+    :cond_116
+    :goto_116
+    move v6, p1
+
+    goto :goto_129
+
+    .line 188
+    :cond_118
+    const-string v0, "system"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_129
+
+    .line 189
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1194,24 +1345,24 @@
     invoke-static {p0, p2, p3}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
-    :try_end_a9
-    .catchall {:try_start_75 .. :try_end_a9} :catchall_ab
+    :try_end_128
+    .catchall {:try_start_b3 .. :try_end_128} :catchall_12a
 
-    move v1, p0
+    move v6, p0
 
-    .line 180
-    :cond_aa
-    :goto_aa
-    goto :goto_d3
+    .line 194
+    :cond_129
+    :goto_129
+    goto :goto_152
 
-    .line 177
-    :catchall_ab
+    .line 191
+    :catchall_12a
     move-exception p0
 
-    .line 178
+    .line 192
     nop
 
-    .line 179
+    .line 193
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object p0
@@ -1220,9 +1371,9 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "Cannot write system setting "
+    const-string v0, "Cannot write system setting "
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -1230,9 +1381,9 @@
 
     move-result-object p1
 
-    const-string v2, ": "
+    const-string v0, ": "
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -1248,17 +1399,17 @@
 
     invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
-    :cond_d3
-    :goto_d3
-    if-eqz v0, :cond_10a
+    .line 197
+    :cond_152
+    :goto_152
+    if-eqz v2, :cond_189
 
-    .line 184
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    .line 198
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object p0
 
-    .line 185
+    .line 199
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1277,12 +1428,12 @@
 
     move-result-object p1
 
-    invoke-interface {p0, p1, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {p0, p1, v6}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 186
-    if-eqz v1, :cond_107
+    .line 200
+    if-eqz v6, :cond_186
 
-    .line 187
+    .line 201
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1303,19 +1454,19 @@
 
     invoke-interface {p0, p1, p3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 189
-    :cond_107
+    .line 203
+    :cond_186
     invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 192
-    :cond_10a
-    return v1
+    .line 206
+    :cond_189
+    return v6
 .end method
 
 .method public static setStatusBarAmPm(Landroid/content/Context;I)Z
     .registers 4
 
-    .line 261
+    .line 275
     const-string v0, "status_bar_am_pm"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1334,7 +1485,7 @@
 .method public static setStatusBarBatteryPercent(Landroid/content/Context;I)Z
     .registers 4
 
-    .line 293
+    .line 307
     const-string v0, "status_bar_show_battery_percent"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1353,7 +1504,7 @@
 .method public static setStatusBarBatteryStyle(Landroid/content/Context;I)Z
     .registers 4
 
-    .line 281
+    .line 295
     const-string v0, "status_bar_battery_style"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1372,7 +1523,7 @@
 .method public static setStatusBarClock(Landroid/content/Context;I)Z
     .registers 4
 
-    .line 249
+    .line 263
     const-string v0, "status_bar_clock"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -1391,7 +1542,7 @@
 .method public static setStatusBarSeconds(Landroid/content/Context;Z)Z
     .registers 4
 
-    .line 273
+    .line 287
     if-eqz p1, :cond_5
 
     const-string p1, "1"

@@ -169,8 +169,22 @@ public class LabsPreferences {
             try {
                 if ("global".equalsIgnoreCase(type)) {
                     applied = Settings.Global.putString(context.getContentResolver(), key, value);
+                    if (KEY_SECURE_FLAG.equals(key) || KEY_WINDOW_IGNORE_SECURE.equals(key) || LEGACY_KEY_SECURE_FLAG.equals(key)) {
+                        Settings.Global.putString(context.getContentResolver(), LEGACY_KEY_SECURE_FLAG, value);
+                        Settings.Global.putString(context.getContentResolver(), KEY_WINDOW_IGNORE_SECURE, value);
+                        Settings.Global.putString(context.getContentResolver(), KEY_SECURE_FLAG, value);
+                    } else if (KEY_KEYBOX_ENABLED.equals(key) || "kaorios_keybox_enabled".equals(key)) {
+                        Settings.Global.putString(context.getContentResolver(), "kaorios_keybox_enabled", value);
+                        Settings.Global.putString(context.getContentResolver(), KEY_KEYBOX_ENABLED, value);
+                    } else if (KEY_KEYBOX_APPLY_ALL.equals(key) || "kaorios_keybox_apply_all".equals(key)) {
+                        Settings.Global.putString(context.getContentResolver(), "kaorios_keybox_apply_all", value);
+                        Settings.Global.putString(context.getContentResolver(), KEY_KEYBOX_APPLY_ALL, value);
+                    }
                 } else if ("secure".equalsIgnoreCase(type)) {
                     applied = Settings.Secure.putString(context.getContentResolver(), key, value);
+                    if (KEY_SECURE_FLAG.equals(key) || KEY_WINDOW_IGNORE_SECURE.equals(key) || LEGACY_KEY_SECURE_FLAG.equals(key)) {
+                        Settings.Secure.putString(context.getContentResolver(), KEY_WINDOW_IGNORE_SECURE, value);
+                    }
                 } else if ("system".equalsIgnoreCase(type)) {
                     applied = Settings.System.putString(context.getContentResolver(), key, value);
                 }
