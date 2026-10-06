@@ -179,6 +179,8 @@ public class LabsPreferences {
                     } else if (KEY_KEYBOX_APPLY_ALL.equals(key) || "kaorios_keybox_apply_all".equals(key)) {
                         Settings.Global.putString(context.getContentResolver(), "kaorios_keybox_apply_all", value);
                         Settings.Global.putString(context.getContentResolver(), KEY_KEYBOX_APPLY_ALL, value);
+                    } else if ("kaorios_keybox_xml".equals(key)) {
+                        syncKeyboxFile(context, value);
                     }
                 } else if ("secure".equalsIgnoreCase(type)) {
                     applied = Settings.Secure.putString(context.getContentResolver(), key, value);
@@ -314,4 +316,29 @@ public class LabsPreferences {
             return defaultMode;
         }
     }
+
+    public static void syncKeyboxFile(Context context, String keyboxXml) {
+        if (keyboxXml == null || keyboxXml.trim().isEmpty()) return;
+        try {
+            java.io.File dir = null;
+            if (context != null) {
+                dir = new java.io.File(context.getFilesDir(), "Toolbox-data");
+            } else {
+                dir = new java.io.File("/data/data/jiro.furyos.labs/files/Toolbox-data");
+            }
+            if (!dir.exists()) {
+                dir.mkdirs();
+            }
+            java.io.File target = new java.io.File(dir, "Keybox.xml");
+            java.io.FileOutputStream fos = new java.io.FileOutputStream(target);
+            fos.write(keyboxXml.getBytes(java.nio.charset.StandardCharsets.UTF_8));
+            fos.flush();
+            fos.close();
+            target.setReadable(true, false);
+            Log.i(TAG, "Successfully synced Keybox.xml to " + target.getAbsolutePath());
+        } catch (Throwable t) {
+            Log.e(TAG, "Failed to sync Keybox.xml: " + t.getMessage(), t);
+        }
+    }
 }
+

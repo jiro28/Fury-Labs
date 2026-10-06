@@ -60,9 +60,6 @@
 
     .line 17
     :pswitch_0
-    invoke-interface {p0, v2}, Ld62;->setValue(Ljava/lang/Object;)V
-
-    .line 20
     return-object v3
 
     .line 21

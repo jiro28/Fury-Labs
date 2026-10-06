@@ -871,7 +871,49 @@
     .line 495
     invoke-direct {v8, v7, v12}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 498
+    const-string v0, "integrity_auto_update"
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v15, v0, v14}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v14, "auto_pif"
+
+    const/4 v6, 0x0
+
+    invoke-interface {v0, v14, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v14
+
+    if-nez v14, :cond_check_update_auto
+
+    const-string v14, "auto_keybox"
+
+    invoke-interface {v0, v14, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v14
+
+    if-nez v14, :cond_check_update_auto
+
+    const-string v14, "auto_security_patch"
+
+    invoke-interface {v0, v14, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_check_update_auto
+
+    const-string v0, "Auto update is disabled, skipping network check"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v14, 0x0
+
+    goto/16 :cond_1d
+
+    :cond_check_update_auto
     :try_start_0
     const-string v0, "Checking for updates..."
 

@@ -3395,6 +3395,8 @@
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
+
+    invoke-static {p1, p2}, Ljiro/furyos/framework/KaoriosFramework;->syncGlobalCacheAfterDirectPut(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_0 .. :try_end_4} :catchall_5
 
@@ -3524,17 +3526,24 @@
 .end method
 
 .method public static sanitizeKeyboxXml(Ljava/lang/String;)Ljava/lang/String;
-    .registers 1
+    .registers 3
 
     .line 632
-    if-eqz p0, :cond_3
+    if-nez p0, :cond_4
 
-    goto :goto_5
-
-    :cond_3
     const-string p0, ""
 
-    :goto_5
+    return-object p0
+
+    :cond_4
+    const-string v0, "@fateh7-original"
+
+    const-string v1, "rsa"
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
     return-object p0
 .end method
 
@@ -3618,9 +3627,23 @@
 .end method
 
 .method public static syncGlobalCacheAfterDirectPut(Ljava/lang/String;Ljava/lang/String;)V
-    .registers 2
+    .registers 3
 
-    .line 636
+    if-eqz p0, :cond_skip
+
+    const-string v0, "kaorios_keybox_xml"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_skip
+
+    sget-object v0, Ljiro/furyos/framework/KaoriosFramework;->appContext:Landroid/content/Context;
+
+    invoke-static {v0, p1}, Ljiro/furyos/framework/LabsPreferences;->syncKeyboxFile(Landroid/content/Context;Ljava/lang/String;)V
+
+    :cond_skip
     return-void
 .end method
 

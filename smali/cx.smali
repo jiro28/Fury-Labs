@@ -11655,7 +11655,7 @@
     const-string v10, "auto_pif"
 
     .line 174
-    invoke-interface {v9, v10, v15}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v9, v10, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     .line 177
     move-result v9
@@ -11720,7 +11720,7 @@
     const-string v10, "auto_keybox"
 
     .line 217
-    invoke-interface {v9, v10, v15}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v9, v10, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     .line 220
     move-result v9
@@ -11785,7 +11785,7 @@
     const-string v11, "auto_security_patch"
 
     .line 260
-    invoke-interface {v9, v11, v15}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v9, v11, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     .line 263
     move-result v9

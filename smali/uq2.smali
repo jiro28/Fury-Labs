@@ -5100,7 +5100,43 @@
     .line 17
     const/4 v6, 0x0
 
-    .line 18
+    const-string v7, "integrity_auto_update"
+
+    invoke-virtual {p0, v7, v6}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v7
+
+    const-string v8, "auto_pif"
+
+    invoke-interface {v7, v8, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    if-nez v8, :cond_check_worker
+
+    const-string v8, "auto_keybox"
+
+    invoke-interface {v7, v8, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    if-nez v8, :cond_check_worker
+
+    const-string v8, "auto_security_patch"
+
+    invoke-interface {v7, v8, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v7
+
+    if-nez v7, :cond_check_worker
+
+    const-string v7, "Auto update is disabled in settings, skip worker"
+
+    invoke-static {v2, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v6
+
+    :cond_check_worker
     :try_start_0
     new-instance v7, Ljava/io/File;
 
