@@ -448,10 +448,10 @@
     iget v0, p0, Lns0;->l:I
 
     .line 3
-    const-string v1, "kaorios_keybox_xml"
+    const-string v1, "furyos_keybox_xml"
 
     .line 5
-    const-string v2, "kaorios_security_patch"
+    const-string v2, "furyos_security_patch"
 
     .line 7
     iget-object v3, p0, Lns0;->n:Ljava/lang/String;
@@ -568,7 +568,7 @@
     move-result-object p1
 
     .line 81
-    const-string v0, "kaorios_pif_json"
+    const-string v0, "furyos_pif_json"
 
     .line 83
     invoke-static {p0, v0, p1}, Lzf1;->a(Lae0;Ljava/lang/String;Ljava/lang/String;)Ly31;
@@ -584,7 +584,7 @@
     invoke-static {p1}, Lby3;->r(Ljava/lang/Object;)V
 
     .line 91
-    const-string p1, "kaorios_hide_devlist"
+    const-string p1, "furyos_hide_devlist"
 
     .line 93
     invoke-virtual {p0, p1, v3}, Lae0;->p(Ljava/lang/String;Ljava/lang/String;)Ly31;
@@ -641,7 +641,7 @@
     invoke-static {p1}, Lby3;->r(Ljava/lang/Object;)V
 
     .line 128
-    const-string p1, "kaorios_secure_flag"
+    const-string p1, "furyos_secure_flag"
 
     .line 130
     invoke-virtual {p0, p1, v3}, Lae0;->p(Ljava/lang/String;Ljava/lang/String;)Ly31;
@@ -698,7 +698,7 @@
     invoke-static {p1}, Lby3;->r(Ljava/lang/Object;)V
 
     .line 165
-    const-string p1, "kaorios_keybox_apply_all_mode"
+    const-string p1, "furyos_keybox_apply_all_mode"
 
     .line 167
     invoke-virtual {p0, p1, v3}, Lae0;->p(Ljava/lang/String;Ljava/lang/String;)Ly31;

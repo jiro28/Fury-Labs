@@ -2033,7 +2033,7 @@
     const v2, 0x7f0d00d9
 
     .line 922
-    const-string v3, "kaorios_pif_json"
+    const-string v3, "furyos_pif_json"
 
     .line 924
     packed-switch v1, :pswitch_data_2
@@ -2104,7 +2104,7 @@
 
     .line 973
     :pswitch_a
-    const-string v1, "kaorios_gameprops_json"
+    const-string v1, "furyos_gameprops_json"
 
     .line 975
     const/4 v2, 0x0

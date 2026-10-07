@@ -246,7 +246,7 @@
     new-instance v1, Landroid/app/NotificationChannel;
 
     .line 108
-    const-string v4, "kaorios_shizuku_overlay_channel"
+    const-string v4, "furyos_shizuku_overlay_channel"
 
     .line 110
     const v5, 0x7f0d009c
@@ -285,7 +285,7 @@
     new-instance v0, Lpa2;
 
     .line 139
-    const-string v1, "kaorios_shizuku_overlay_channel"
+    const-string v1, "furyos_shizuku_overlay_channel"
 
     .line 141
     invoke-direct {v0, p0, v1}, Lpa2;-><init>(Landroid/content/Context;Ljava/lang/String;)V

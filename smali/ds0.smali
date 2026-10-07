@@ -929,7 +929,7 @@
     check-cast v6, Ljava/util/Map;
 
     .line 543
-    const-string v13, "kaorios_keybox_enabled"
+    const-string v13, "furyos_keybox_enabled"
 
     .line 545
     invoke-interface {v6, v13}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -956,7 +956,7 @@
     check-cast v13, Ljava/util/Map;
 
     .line 561
-    const-string v14, "kaorios_keybox_apply_all"
+    const-string v14, "furyos_keybox_apply_all"
 
     .line 563
     invoke-interface {v13, v14}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -986,7 +986,7 @@
     check-cast v3, Ljava/util/Map;
 
     .line 581
-    const-string v4, "kaorios_keybox_apply_all_mode"
+    const-string v4, "furyos_keybox_apply_all_mode"
 
     .line 583
     invoke-interface {v3, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;

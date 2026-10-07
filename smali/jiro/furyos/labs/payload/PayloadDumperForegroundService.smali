@@ -86,7 +86,7 @@
     new-instance v2, Lpa2;
 
     .line 29
-    const-string v3, "kaorios_payload_dumper_jobs"
+    const-string v3, "furyos_payload_dumper_jobs"
 
     .line 31
     invoke-direct {v2, p0, v3}, Lpa2;-><init>(Landroid/content/Context;Ljava/lang/String;)V

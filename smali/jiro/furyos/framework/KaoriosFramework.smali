@@ -161,6 +161,43 @@
 
     .line 371
     :cond_5d
+    invoke-virtual {v1, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_check_key_sq
+
+    invoke-virtual {v1, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_strip_key_q
+
+    :cond_check_key_sq
+    invoke-virtual {v1, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_key_clean_done
+
+    invoke-virtual {v1, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_key_clean_done
+
+    :cond_strip_key_q
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    sub-int/2addr v2, v0
+
+    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_key_clean_done
     invoke-static {v3, v1, p0}, Ljiro/furyos/framework/KaoriosFramework;->putSetting(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -2228,9 +2265,9 @@
     .registers 13
 
     .line 224
-    const-string v0, "kaorios_secure_flag"
+    const-string v0, "furyos_secure_flag"
 
-    const-string v1, "kaorios_hide_devlist"
+    const-string v1, "furyos_hide_devlist"
 
     const-string v2, ""
 
@@ -2240,7 +2277,7 @@
 
     .line 227
     :cond_9
-    const-string v3, "kaorios_secure_flag_work"
+    const-string v3, "furyos_secure_flag_work"
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2257,7 +2294,7 @@
     return-object v0
 
     :cond_check_hide_app
-    const-string v3, "kaorios_hide_app_work"
+    const-string v3, "furyos_hide_app_work"
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2272,7 +2309,7 @@
     return-object v0
 
     :cond_check_hide_dev
-    const-string v3, "kaorios_hide_dev_work"
+    const-string v3, "furyos_hide_dev_work"
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3204,41 +3241,9 @@
 
     .line 45
     :cond_1f
-    const-string v0, "set_key"
+    sget-object v0, Ljiro/furyos/framework/KaoriosFramework;->appContext:Landroid/content/Context;
 
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 46
-    const-string v1, "set_val"
-
-    invoke-virtual {p0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 47
-    const-string v2, "set_table"
-
-    invoke-virtual {p0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 48
-    if-eqz v0, :cond_3f
-
-    if-eqz v1, :cond_3f
-
-    .line 49
-    if-eqz p0, :cond_38
-
-    goto :goto_3a
-
-    :cond_38
-    const-string p0, "global"
-
-    :goto_3a
-    invoke-static {p0, v0, v1}, Ljiro/furyos/framework/KaoriosFramework;->putSetting(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v0, p0}, Ljiro/furyos/framework/LabsPreferences;->handleIntentExtras(Landroid/content/Context;Landroid/content/Intent;)V
     :try_end_3d
     .catchall {:try_start_3 .. :try_end_3d} :catchall_3e
 
@@ -3444,7 +3449,7 @@
 
     move-result v0
 
-    const-string v1, "kaorios_hide_devlist"
+    const-string v1, "furyos_hide_devlist"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3631,7 +3636,7 @@
 
     if-eqz p0, :cond_skip
 
-    const-string v0, "kaorios_keybox_xml"
+    const-string v0, "furyos_keybox_xml"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3655,7 +3660,7 @@
 
     const-string v1, "hide_developer_status"
 
-    const-string v2, "kaorios_hide_devlist"
+    const-string v2, "furyos_hide_devlist"
 
     :try_start_6
     new-instance v3, Lorg/json/JSONObject;

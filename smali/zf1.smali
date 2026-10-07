@@ -12,13 +12,13 @@
     .locals 3
 
     .line 1
-    const-string v0, "kaorios_keybox_xml"
+    const-string v0, "furyos_keybox_xml"
 
     .line 3
-    const-string v1, "kaorios_security_patch"
+    const-string v1, "furyos_security_patch"
 
     .line 5
-    const-string v2, "kaorios_pif_json"
+    const-string v2, "furyos_pif_json"
 
     .line 7
     filled-new-array {v2, v0, v1}, [Ljava/lang/String;
@@ -49,7 +49,7 @@
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 7
-    const-string v0, "kaorios_security_patch"
+    const-string v0, "furyos_security_patch"
 
     .line 9
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z

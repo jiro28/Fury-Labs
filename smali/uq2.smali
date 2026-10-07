@@ -5213,7 +5213,7 @@
 
     .line 67
     :cond_1
-    const-string v9, "kaorios_settings"
+    const-string v9, "furyos_settings"
 
     .line 69
     invoke-virtual {p0, v9, v6}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -5577,7 +5577,7 @@
     const/4 v3, 0x3
 
     .line 44
-    const-string v4, "kaorios_update_channel"
+    const-string v4, "furyos_update_channel"
 
     .line 46
     invoke-direct {v1, v4, v2, v3}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V

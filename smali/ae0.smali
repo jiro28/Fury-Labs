@@ -2022,7 +2022,7 @@
     move-result p0
 
     .line 35
-    const-string v2, "kaorios_time"
+    const-string v2, "furyos_time"
 
     .line 37
     if-eqz p0, :cond_2
@@ -2031,7 +2031,7 @@
     const-string p0, "global"
 
     .line 41
-    invoke-static {p0, p1, p2}, Lae0;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, p1, p2}, Ljiro/furyos/framework/KaoriosFramework;->putSetting(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 44
     move-result p0

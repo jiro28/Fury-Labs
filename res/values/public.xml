@@ -1397,6 +1397,8 @@
     <public type="string" name="wallpaper_reset_defaults" id="0x7f0d031d" />
     <public type="string" name="wallpaper_settings" id="0x7f0d031e" />
     <public type="string" name="wallpaper_settings_desc" id="0x7f0d031f" />
+    <public type="string" name="custom_clock_seconds_title" id="0x7f0d0320" />
+    <public type="string" name="custom_clock_seconds_desc" id="0x7f0d0321" />
     <public type="style" name="DialogWindowTheme" id="0x7f0e0000" />
     <public type="style" name="EdgeToEdgeFloatingDialogTheme" id="0x7f0e0001" />
     <public type="style" name="EdgeToEdgeFloatingDialogWindowTheme" id="0x7f0e0002" />

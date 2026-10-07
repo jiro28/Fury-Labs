@@ -358,7 +358,7 @@
     iget-object v6, v7, Ly01;->b:Ljava/lang/String;
 
     .line 178
-    const-string v5, "kaorios_keybox_enabled"
+    const-string v5, "furyos_keybox_enabled"
 
     .line 180
     invoke-static {v6, v5}, Llh1;->t(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -587,7 +587,7 @@
     move-object/from16 v19, v15
 
     .line 322
-    const-string v10, "kaorios_keybox_apply_all"
+    const-string v10, "furyos_keybox_apply_all"
 
     .line 324
     invoke-static {v6, v10}, Llh1;->t(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -1636,7 +1636,7 @@
     check-cast v0, Ljava/util/Map;
 
     .line 975
-    const-string v4, "kaorios_secure_flag"
+    const-string v4, "furyos_secure_flag"
 
     .line 977
     invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;

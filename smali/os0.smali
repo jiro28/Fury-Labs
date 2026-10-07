@@ -213,7 +213,7 @@
     sget-object v2, Lqw3;->a:Lqw3;
 
     .line 7
-    const-string v3, "kaorios_time"
+    const-string v3, "furyos_time"
 
     .line 9
     const v5, 0x7f0d00c9
@@ -377,7 +377,7 @@
     move-result v3
 
     .line 114
-    const-string v4, "kaorios_secure_flag"
+    const-string v4, "furyos_secure_flag"
 
     .line 116
     if-eqz v3, :cond_4
@@ -660,7 +660,7 @@
     move-result v3
 
     .line 300
-    const-string v4, "kaorios_keybox_apply_all_mode"
+    const-string v4, "furyos_keybox_apply_all_mode"
 
     .line 302
     if-eqz v3, :cond_d

@@ -2046,7 +2046,7 @@
     new-instance v0, Lpa2;
 
     .line 16
-    const-string v1, "kaorios_payload_dumper_jobs"
+    const-string v1, "furyos_payload_dumper_jobs"
 
     .line 18
     invoke-direct {v0, p0, v1}, Lpa2;-><init>(Landroid/content/Context;Ljava/lang/String;)V
@@ -5070,7 +5070,7 @@
 
     .line 12
     :cond_0
-    const-string v1, "kaorios_payload_dumper_jobs"
+    const-string v1, "furyos_payload_dumper_jobs"
 
     .line 14
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->getNotificationChannel(Ljava/lang/String;)Landroid/app/NotificationChannel;

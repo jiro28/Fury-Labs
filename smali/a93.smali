@@ -73,7 +73,7 @@
     iput-object p1, p0, La93;->a:Ljiro/furyos/labs/MainActivity;
 
     .line 12
-    const-string v3, "kaorios_settings"
+    const-string v3, "furyos_settings"
 
     .line 14
     const/4 v4, 0x0

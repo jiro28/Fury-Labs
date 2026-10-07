@@ -4214,7 +4214,7 @@
     move-result-object v2
 
     .line 43
-    const-string v3, "kaorios_logo"
+    const-string v3, "furyos_logo"
 
     .line 45
     invoke-virtual {v0, v3, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I

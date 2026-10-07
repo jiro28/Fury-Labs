@@ -3998,7 +3998,7 @@
     move-result v3
 
     .line 1741
-    const-string v4, "kaorios_time"
+    const-string v4, "furyos_time"
 
     .line 1743
     if-eqz v3, :cond_4b

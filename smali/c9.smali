@@ -2999,7 +2999,7 @@
 
     .line 1178
     :cond_43
-    const-string v0, "kaorios_keybox_apply_all_mode"
+    const-string v0, "furyos_keybox_apply_all_mode"
 
     .line 1180
     invoke-virtual {v10, v0, v12}, Lae0;->l(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

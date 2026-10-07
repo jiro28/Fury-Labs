@@ -188,7 +188,7 @@
     iget v1, v0, Lbg1;->l:I
 
     .line 5
-    const-string v2, "kaorios_security_patch"
+    const-string v2, "furyos_security_patch"
 
     .line 7
     const-string v3, "SECURITY_PATCH"
@@ -203,7 +203,7 @@
     iget-object v7, v0, Lbg1;->p:Landroid/content/Context;
 
     .line 15
-    const/4 v8, 0x1
+    const/4 v8, 0x0
 
     .line 16
     const/4 v9, 0x0
@@ -593,7 +593,7 @@
     sget-object v0, Lzf1;->a:Ljava/util/Set;
 
     .line 243
-    const-string v0, "kaorios_pif_json"
+    const-string v0, "furyos_pif_json"
 
     .line 245
     invoke-static {v5}, Lri3;->x0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -731,7 +731,7 @@
     sget-object v4, Lzf1;->a:Ljava/util/Set;
 
     .line 318
-    const-string v4, "kaorios_keybox_xml"
+    const-string v4, "furyos_keybox_xml"
 
     .line 320
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

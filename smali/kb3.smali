@@ -90,7 +90,7 @@
     move-result-object p1
 
     .line 8
-    const-string v0, "kaorios_shizuku_overlay_settings"
+    const-string v0, "furyos_shizuku_overlay_settings"
 
     .line 10
     const/4 v1, 0x0

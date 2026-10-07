@@ -487,7 +487,7 @@
     move-result-object v1
 
     .line 166
-    const-string v2, "kaorios_perf_overlay_mode"
+    const-string v2, "furyos_perf_overlay_mode"
 
     .line 168
     invoke-virtual {v1, v2, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;

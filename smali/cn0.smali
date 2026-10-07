@@ -3537,7 +3537,7 @@
     check-cast v1, Ljava/util/Map;
 
     .line 1528
-    const-string v3, "kaorios_time"
+    const-string v3, "furyos_time"
 
     .line 1530
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;

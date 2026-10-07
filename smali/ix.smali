@@ -209,6 +209,58 @@
     .line 52
     move-result-object v0
 
+    new-instance v9, Ly01;
+
+    sget-object v14, Lhr0;->s:Lhr0;
+
+    const/16 v16, 0x80
+
+    const v10, 0x7f0d0150
+
+    const-string v11, "furyos_secure_flag"
+
+    const v12, 0x7f0d0151
+
+    const/4 v13, 0x0
+
+    move-object v15, v6
+
+    invoke-direct/range {v9 .. v16}, Ly01;-><init>(ILjava/lang/String;IZLhr0;Lgr0;I)V
+
+    invoke-static {v9}, Lgw;->S(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lfw;->H0(Ljava/util/Collection;Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    new-instance v9, Ly01;
+
+    sget-object v14, Lhr0;->u:Lhr0;
+
+    const/16 v16, 0x80
+
+    const v10, 0x7f0d0320
+
+    const-string v11, "status_bar_clock_seconds"
+
+    const v12, 0x7f0d0321
+
+    const/4 v13, 0x0
+
+    move-object v15, v6
+
+    invoke-direct/range {v9 .. v16}, Ly01;-><init>(ILjava/lang/String;IZLhr0;Lgr0;I)V
+
+    invoke-static {v9}, Lgw;->S(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lfw;->H0(Ljava/util/Collection;Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
     .line 53
     return-object v0
 .end method
@@ -13449,7 +13501,7 @@
     const v1, 0x7f0d0159
 
     .line 8
-    const-string v2, "kaorios_spoof_gms"
+    const-string v2, "furyos_spoof_gms"
 
     .line 10
     const v3, 0x7f0d015a
@@ -13479,7 +13531,7 @@
     const v9, 0x7f0d0163
 
     .line 30
-    const-string v10, "kaorios_spoof_vending"
+    const-string v10, "furyos_spoof_vending"
 
     .line 32
     const v11, 0x7f0d0164
@@ -13506,7 +13558,7 @@
     const v3, 0x7f0d0110
 
     .line 48
-    const-string v4, "kaorios_keybox_enabled"
+    const-string v4, "furyos_keybox_enabled"
 
     .line 50
     const v5, 0x7f0d0111
@@ -13539,7 +13591,7 @@
     const v11, 0x7f0d010e
 
     .line 72
-    const-string v12, "kaorios_keybox_apply_all"
+    const-string v12, "furyos_keybox_apply_all"
 
     .line 74
     const v13, 0x7f0d010f
@@ -13566,7 +13618,7 @@
     const v5, 0x7f0d0137
 
     .line 91
-    const-string v6, "kaorios_spoof_photos"
+    const-string v6, "furyos_spoof_photos"
 
     .line 93
     const v7, 0x7f0d0138
@@ -13590,7 +13642,7 @@
     const v11, 0x7f0d00e1
 
     .line 109
-    const-string v12, "kaorios_spoof_gameprops"
+    const-string v12, "furyos_spoof_gameprops"
 
     .line 111
     const v13, 0x7f0d00cc
@@ -13614,7 +13666,7 @@
     const v7, 0x7f0d0161
 
     .line 127
-    const-string v8, "kaorios_spoof_tft"
+    const-string v8, "furyos_spoof_tft"
 
     .line 129
     const v9, 0x7f0d0162

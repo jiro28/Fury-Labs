@@ -800,4 +800,6 @@
     <string name="wallpaper_reset_defaults">Reset to defaults</string>
     <string name="wallpaper_settings">Choose wallpaper</string>
     <string name="wallpaper_settings_desc">Background image and blur</string>
+    <string name="custom_clock_seconds_title">Show clock seconds</string>
+    <string name="custom_clock_seconds_desc">Display seconds in the status bar clock</string>
 </resources>

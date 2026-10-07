@@ -189,7 +189,7 @@
     iget v0, p0, Lsn2;->l:I
 
     .line 3
-    const-string v1, "kaorios_pif_json"
+    const-string v1, "furyos_pif_json"
 
     .line 5
     iget-object v2, p0, Lsn2;->m:Ld62;
@@ -235,7 +235,7 @@
     check-cast p1, Ljava/lang/String;
 
     .line 35
-    const-string v0, "kaorios_security_patch"
+    const-string v0, "furyos_security_patch"
 
     .line 37
     invoke-static {p0, v0, p1}, Lzf1;->a(Lae0;Ljava/lang/String;Ljava/lang/String;)Ly31;

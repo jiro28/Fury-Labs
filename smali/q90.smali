@@ -12119,7 +12119,7 @@
     const-string v0, "AndroidKeyStore"
 
     .line 3
-    const-string v1, "kaorios_attestation_key"
+    const-string v1, "furyos_attestation_key"
 
     .line 5
     const/4 v2, 0x0

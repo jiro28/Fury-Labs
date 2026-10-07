@@ -315,7 +315,7 @@
     move-result-object p0
 
     .line 95
-    const-string p1, "kaorios_pif_json"
+    const-string p1, "furyos_pif_json"
 
     .line 97
     invoke-static {v5, p1, p0}, Lzf1;->a(Lae0;Ljava/lang/String;Ljava/lang/String;)Ly31;
@@ -451,7 +451,7 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 174
-    const-string p1, "kaorios_keybox_xml"
+    const-string p1, "furyos_keybox_xml"
 
     .line 176
     invoke-static {v5, p1, p0}, Lzf1;->a(Lae0;Ljava/lang/String;Ljava/lang/String;)Ly31;

@@ -278,7 +278,7 @@
     move-result-object v0
 
     .line 95
-    const-string v14, "kaorios_settings"
+    const-string v14, "furyos_settings"
 
     .line 97
     iget-object v15, v1, Ld80;->p:Landroid/content/Context;

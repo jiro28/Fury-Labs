@@ -206,7 +206,7 @@
     check-cast v1, Ljava/util/Map;
 
     .line 85
-    const-string v6, "kaorios_secure_flag"
+    const-string v6, "furyos_secure_flag"
 
     .line 87
     invoke-interface {v1, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -370,7 +370,7 @@
     check-cast v1, Ljava/util/Map;
 
     .line 185
-    const-string v6, "kaorios_keybox_apply_all_mode"
+    const-string v6, "furyos_keybox_apply_all_mode"
 
     .line 187
     invoke-interface {v1, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;

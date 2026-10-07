@@ -315,7 +315,7 @@
     const v5, 0x7f0d0150
 
     .line 172
-    const-string v6, "kaorios_secure_flag"
+    const-string v6, "furyos_secure_flag"
 
     .line 174
     const v7, 0x7f0d0151

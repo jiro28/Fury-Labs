@@ -295,10 +295,10 @@
     iget v0, p0, Ljs0;->l:I
 
     .line 3
-    const-string v1, "kaorios_gameprops_json"
+    const-string v1, "furyos_gameprops_json"
 
     .line 5
-    const-string v2, "kaorios_target_txt"
+    const-string v2, "furyos_target_txt"
 
     .line 7
     iget-object v3, p0, Ljs0;->m:Ljava/util/List;
@@ -510,7 +510,7 @@
     if-eqz v2, :cond_7
 
     .line 128
-    const-string p1, "kaorios_keybox_apply_all_mode"
+    const-string p1, "furyos_keybox_apply_all_mode"
 
     .line 130
     const-string v4, "gen"

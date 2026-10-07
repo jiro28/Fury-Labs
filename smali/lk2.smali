@@ -24,7 +24,7 @@
     move-result-object p1
 
     .line 11
-    const-string v0, "kaorios_perf_overlay_mode"
+    const-string v0, "furyos_perf_overlay_mode"
 
     .line 13
     const/4 v1, 0x0

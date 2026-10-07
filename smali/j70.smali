@@ -930,7 +930,7 @@
     move-result-object v0
 
     .line 36
-    const-string v1, "kaorios_gameprops_json"
+    const-string v1, "furyos_gameprops_json"
 
     .line 38
     invoke-virtual {v9, v1, v0}, Lae0;->p(Ljava/lang/String;Ljava/lang/String;)Ly31;

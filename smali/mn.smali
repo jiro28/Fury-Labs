@@ -916,7 +916,7 @@
     iget-object v4, v14, Ly01;->b:Ljava/lang/String;
 
     .line 572
-    const-string v8, "kaorios_keybox_enabled"
+    const-string v8, "furyos_keybox_enabled"
 
     .line 574
     invoke-static {v4, v8}, Llh1;->t(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -956,7 +956,7 @@
     iget-object v9, v8, Ly01;->b:Ljava/lang/String;
 
     .line 598
-    const-string v10, "kaorios_keybox_apply_all"
+    const-string v10, "furyos_keybox_apply_all"
 
     .line 600
     invoke-static {v9, v10}, Llh1;->t(Ljava/lang/Object;Ljava/lang/Object;)Z
